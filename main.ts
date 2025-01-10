@@ -1,10 +1,10 @@
 
-namespace Images {
+namespace images {
     
     //%blockid=img_findimg
     //%block="find index $inimg in $arrimg in $percent chance"
     //%percent.min=0 percent.max=100 percent.defl=50
-    //%arrimg.shadow="list_create_with" arrimg.defl="screen_image_picker"
+    //%arrimg.shadow="lists_create_with" arrimg.defl="screen_image_picker"
     //%inimg.shadow="screen_image_picker"
     //%group="find image index"
     //%weight=10
