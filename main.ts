@@ -3,7 +3,7 @@ namespace images {
     
     //%blockid=img_findimg
     //%block="find index $inimg in $arrimg in $percent chance"
-    //%percent.min=0 percent.max=100 percent.defl=50
+    //%percent.min=1 percent.max=100 percent.defl=50
     //%arrimg.shadow="lists_create_with" arrimg.defl="screen_image_picker"
     //%inimg.shadow="screen_image_picker"
     //%group="find image index"
@@ -12,6 +12,8 @@ namespace images {
     export function find(inimg:Image,arrimg:Image[],percent:number=50) {
         let nv = 0,anv = 0
         let uimg: Image = null
+        while (percent > 0) {
+            if (percent <= 0) break;
         for (let i = 0;i < arrimg.length;i++) {
             nv = 0
             uimg = arrimg[i]
@@ -23,6 +25,8 @@ namespace images {
             }
             anv = Math.map(nv, 0, (inimg.width*inimg.height), 0, 100)
             if (anv > percent) return i;
+        }
+        percent -= 1
         }
         return -1
     }
