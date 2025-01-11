@@ -29,8 +29,6 @@ namespace images {
             }
             percent -= 1
         }
-        percent -= 1
-        }
         return -1
     }
 }
